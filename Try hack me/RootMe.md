@@ -60,9 +60,9 @@ $find / -name user.txt
 now we need privilege escalation :
 ----------------------------------
 
-sudo -l  #need our passs which we don't know :(
--rw-r--r-- 1 root root 1603 Aug  4  2020 /etc/passwd
--rw-r----- 1 root shadow 1157 Aug  4  2020 /etc/shadow
+#sudo -l  #need our passs which we don't know :(
+#-rw-r--r-- 1 root root 1603 Aug  4  2020 /etc/passwd
+#-rw-r----- 1 root shadow 1157 Aug  4  2020 /etc/shadow
 
 suid
 ======
