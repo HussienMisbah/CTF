@@ -1,5 +1,5 @@
 
-#my ip : X.X.X.X \n
+#my ip : X.X.X.X 
 machine : 10.10.236.241
 
 SCANNING
@@ -44,7 +44,7 @@ EXPLOITAION
 ===========
 #trying phtml and changing ip in the code 
 # it is uploaded ! , and you can find it in the uploads section !
-# set a listener 
+#set a listener 
 $nc -lvp 1234 #my port
 and execute it at uploads page 
 =============================
