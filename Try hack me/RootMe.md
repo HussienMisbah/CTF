@@ -33,9 +33,13 @@ ENUMRATION
 https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
 
 #let's upload it and check if there is filteration techniques on uploading files 
+
 #it doesn't accecpt php files :)
+
 #let's check /uploads maybe it is uploaded and checked at their side !
+
 #it is not :(
+
 #let's try some modification on extenstion
 
 phtml, .php, .php3, .php4, .php5, and .inc
@@ -45,16 +49,21 @@ EXPLOITAION
 #trying phtml and changing ip in the code 
 # it is uploaded ! , and you can find it in the uploads section !
 #set a listener 
+
 $nc -lvp 1234 #my port
+
 and execute it at uploads page 
 =============================
    NOW WE HAVE A SHELL !
 =============================
 as www-data 
+
 #to get stable shell 
+
 $ python3 -c "import pty ; pty.spawn('/bin/bash')"
 
 get user flag :
+
 $find / -name user.txt
 
 now we need privilege escalation :
@@ -69,6 +78,7 @@ now we need privilege escalation :
 suid
 ======
 SUID, the special permission for the user access level has a single function: 
+
 A file with SUID always executes as the user who owns the file, regardless of the user passing the command. 
 
 check for suid premissions :
