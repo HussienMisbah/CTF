@@ -1,5 +1,5 @@
 
-#my ip : X.X.X.X
+#my ip : X.X.X.X \n
 machine : 10.10.236.241
 
 SCANNING
@@ -33,8 +33,8 @@ ENUMRATION
 https://raw.githubusercontent.com/pentestmonkey/php-reverse-shell/master/php-reverse-shell.php
 
 #let's upload it and check if there is filteration techniques on uploading files 
-# it doesn't accecpt php files :)
-# let's check /uploads maybe it is uploaded and checked at their side !
+#it doesn't accecpt php files :)
+#let's check /uploads maybe it is uploaded and checked at their side !
 #it is not :(
 #let's try some modification on extenstion
 
