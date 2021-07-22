@@ -8,15 +8,15 @@ a b c d e f g h i j k l m n o q r s t u v w x y z
 
 pseudo code 
 ```
-shift =0 
-e->f
 shift =1
-j->l
+e->f
 shift =2
+j->l
+shift =3
 x->a 'wrap around'
-shift=3
+shift=4
 c->g
-shift=4 
+shift=5
 ..
 ... 
 ....
