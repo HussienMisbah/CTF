@@ -91,6 +91,7 @@ Billy joel XX
 
 
 [*] using wpscan to crack kwheel password 
+
 └─$ wpscan --url blog.thm -U kwheel  -P /usr/share/wordlists/rockyou.txt               2 ⨯
 
 ```
