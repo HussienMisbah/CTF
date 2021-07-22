@@ -48,8 +48,9 @@ if(auction_choice == 1){
                         printf("\nYour current balance after transaction: %d\n\n", account_balance);
                     }
 ```
-as we can see our balance can be modified at this block , we msut inter +ve number of flags and it will be multiplied by 900 and "if total cost <= balance" this will be subtract from 
-our balance .
+as we can see our balance can be modified at this block , we msut inter +ve number of flags and it will be multiplied by 900 and
+
+"if total cost <= balance" this will be subtract from  our balance .
 ## intger overflow :
 integer range is -2147483647 : +2147483648 
 
