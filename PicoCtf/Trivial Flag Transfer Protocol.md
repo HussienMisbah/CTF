@@ -27,6 +27,8 @@ instructions/TFTP DOESNT ENCRYPT OUR TRAFFIC SO WE MUST DISGUISE OUR FLAG TRANSF
 
 `$steghide extract -sf picture3.bmp `
 
+as the plan.txt says 'HID IT WITH- "DUEDILIGENCE"' so it works as a pass phrase !
+
 if it isn't installed at your machine then install it first 
 
 `sudo apt install steghide`
