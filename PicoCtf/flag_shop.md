@@ -65,6 +65,7 @@ exploit
 we will enter number of flags = (2147483648/900)+n ;where n >=1  , so this number will wrap around and be in the -ve side 
 
 this will satisfy conditions
+
 [*]no.flags >0 
 
 [*]total cost <=  balance ; hence it will be -ve 
