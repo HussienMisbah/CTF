@@ -27,5 +27,9 @@ instructions/TFTP DOESNT ENCRYPT OUR TRAFFIC SO WE MUST DISGUISE OUR FLAG TRANSF
 
 `$steghide extract -sf picture3.bmp `
 
+if it isn't installed at your machine then install it first 
+
+`sudo apt install steghide`
+
 now you will find flag.txt
 
