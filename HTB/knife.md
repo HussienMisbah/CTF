@@ -45,7 +45,9 @@ $ gobuster dir -u "http://10.10.10.242/" -w=/usr/share/dirbuster/wordlists/direc
 
 
 ### taking a look at wappalayzer : php 8.1.0
-#### by searching for it found a possible rce and it is verified .
+#### by searching for it found a possible rce 
+
+https://www.exploit-db.com/exploits/49933 
 
 
 running script we got a shell as "james"
