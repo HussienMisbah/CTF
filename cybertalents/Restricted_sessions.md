@@ -95,7 +95,7 @@ so it seems the cookie needs UserInfo :(
 
 ![Alt Text](https://media.giphy.com/media/l1KVaj5UcbHwrBMqI/giphy.gif)
 
-we see in the js code that when there is a valid cookie it will send post request to the /getcurrentuserinfo.php . so let's make it our self with any valid cookie .
+we see in the js code that when there is a valid cookie it will send post request to the /getcurrentuserinfo.php . so let's make it our self by sending it as a parameter 
 
 ```
 POST /restricted-sessions/getcurrentuserinfo.php HTTP/1.1
