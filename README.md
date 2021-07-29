@@ -12,4 +12,4 @@ Write-ups for :
 
 [*]cybertalents
 
-[*]hackthebox (in progress)
+[*]hackthebox 
