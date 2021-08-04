@@ -71,9 +71,5 @@ if(isset($_GET['url'])){
 ```
 
 
-you can see ` $jpeg =  'Server!
-
-@Flag';`
-
-
+you can see ` $jpeg =  'Server!@Flag' 
 
