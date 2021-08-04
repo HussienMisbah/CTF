@@ -16,7 +16,9 @@ let's try different representation for the localhost
 
 ex: 2130706433, 017700000001 , 127.1 
 
-it can access `stockApi=http://127.1/ ` however when try /admin it returns bad request .
+it can access `stockApi=http://127.1/ ` 
+
+however when try /admin it returns bad request .
 
 ``
 By using double encoding it’s possible to bypass security filters that only decode user input once. 
