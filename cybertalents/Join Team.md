@@ -1,12 +1,13 @@
 
 after navigating through tabs figure out the system looks like :
+```
 /
 ├── index.php
 ├── home
 ├── about
 ├── jobs
 ├── data 'directory'
-
+```
 and any file passed to index.php? will be printed out on it . 
 
 upload page and is looks like it checks if it ends with .pdf file 
@@ -19,9 +20,13 @@ upload page and is looks like it checks if it ends with .pdf file
 3-upload it successfully 
 
 4-it will redirect you to  :
+
 `http://18.192.3.151/join-team/index.php/data/test.php.pdf`
+
 5- execute it by :
+
 we pass the pdf file as parameter so it will get executed into the index.php file 
+
 `http://18.192.3.151/join-team/index.php?data/test.php.pdf`
 
 
