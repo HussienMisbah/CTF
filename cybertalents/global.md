@@ -23,6 +23,6 @@ http://ec2-35-158-236-11.eu-central-1.compute.amazonaws.com/global/?page=https:/
 
 ![image](https://user-images.githubusercontent.com/67979878/128606525-1e6e0cfe-2599-4ea3-810a-2f140df5b46b.png)
 
-
+edit : i tried to upload a php reverse shell and it worked as well  so you can navigate and read /var/www/html/index.php from the server it self :) 
 
 # done
