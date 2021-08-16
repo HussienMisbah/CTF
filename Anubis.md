@@ -2,6 +2,8 @@
 
 ## category | digital forensics
 
+![Anubis_Cover](https://user-images.githubusercontent.com/67979878/129636371-e5b0b463-ce75-45be-98e4-fd8b82931e9d.jpg)
+
 challenge link : https://drive.google.com/file/d/1GMF9IgpfDxKfzbJ5TCjUNsdTRm7Eamzr/view?fbclid=IwAR2L03osXYPsrI_E5ZMkspkFjzLNedLSxqlJj2FarpSspHn_hd_96GIwlT0
 
 it is a pcapng file so let's check it with wireshark :) 
