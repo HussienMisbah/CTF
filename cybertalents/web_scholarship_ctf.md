@@ -138,3 +138,23 @@ we have a hint form the author : `The second part of the flag has to do with you
 `FLAG{8f94cf148a9f01a3745e12f1fc6f8e419dc0fb08}`
 
 # 7- grocery bot | 200 pts
+
+```
+well it was the hardest one xD , when try /price flag ' it returns an error occured so it seems sql but blind :( 
+
+maybe this is not smartest way , i try hard to autmoate this but can't :( 
+
+/price flag' AND (SELECT CASE WHEN (SUBSTR(flag,1,1)='F') THEN 1/0 ELSE 'a' END FROM flags)='a
+
+if returns an error occured so we are on right path , otherwise then characters is not in the flag
+
+```
+![image](https://user-images.githubusercontent.com/67979878/132033008-3be4a7da-a676-483e-8312-9915927dc321.png)
+![image](https://user-images.githubusercontent.com/67979878/132033122-43e33882-2635-4f50-aa29-5b8e5e874ff9.png)
+![image](https://user-images.githubusercontent.com/67979878/132033715-d625bf4f-179c-4196-a918-9a5ec21a6138.png)
+
+after a long time :
+
+`` | FLAG{sql_1nj3c7i0n_c4n_h4pp3n_t0_b0ts_t0o} ``
+
+# done
