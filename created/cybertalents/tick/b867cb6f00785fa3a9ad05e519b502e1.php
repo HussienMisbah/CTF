@@ -19,5 +19,6 @@ if ( (strpos($val6, "`-alert(") === 0 ) or (strpos($val6,"`-confirm(") === 0) or
     }
 
 }
-
+else
+    echo '<!Doctype html><html><h2> hmmmmmm.....Try Harder </h2></html>';
 ?>
