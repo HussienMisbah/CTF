@@ -8,9 +8,10 @@ Write-ups for :
 
 ## [*] [Try hack me](https://github.com/HussienMisbah/CTF/tree/main/Try%20hack%20me) 
 
-## [*]hackthebox 
+## [*] [hackthebox](https://github.com/HussienMisbah/CTF/tree/main/HTB)
 
-## [*] Pico-CTF
+## [*] [cybertalents](https://github.com/HussienMisbah/CTF/tree/main/cybertalents)
 
-## [*]cybertalents
+## [*] [Pico-CTF](https://github.com/HussienMisbah/CTF/tree/main/PicoCtf)
 
+## [*] [portswigger](https://github.com/HussienMisbah/CTF/tree/main/portswigger)
