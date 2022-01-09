@@ -6,7 +6,7 @@ you will find write-ups without "sharing flags" as you should follow up steps to
 
 Write-ups for :
 
-## [*] Try hack me 
+## [*] [Try hack me](https://github.com/HussienMisbah/CTF/tree/main/Try%20hack%20me) 
 
 ## [*]hackthebox 
 
