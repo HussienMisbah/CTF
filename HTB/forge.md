@@ -219,29 +219,17 @@ try:
 clientsock.send(b'Enter the secret passsword: ')
 if clientsock.recv(1024).strip().decode() != 'secretadminpassword':
 	clientsock.send(b'Wrong password!\n')
-else:
-	clientsock.send(b'Welcome admin!\n')
-	while True:
-		clientsock.send(b'\nWhat do you wanna do: \n')
-		clientsock.send(b'[1] View processes\n')
-		clientsock.send(b'[2] View free memory\n')
-		clientsock.send(b'[3] View listening sockets\n')
-		clientsock.send(b'[4] Quit\n')
-		option = int(clientsock.recv(1024).strip())
+...
+......
+....
  ```
 
 3- options we have :
 
 ```python
-if option == 1:
-    clientsock.send(subprocess.getoutput('ps aux').encode())
-elif option == 2:
-    clientsock.send(subprocess.getoutput('df').encode())
-elif option == 3:
-    clientsock.send(subprocess.getoutput('ss -lnt').encode())
-elif option == 4:
-        clientsock.send(b'Bye\n')
-        break
+...
+....
+......
 except Exception as e:
     print(e)
     pdb.post_mortem(e.__traceback__)
