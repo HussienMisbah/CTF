@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/67979878/150385260-9637d5fa-2d7f-4b87-b4b7-dfd9901b4363.png)
+![Pasted image 20220117172058](https://user-images.githubusercontent.com/67979878/150386086-4861b677-2020-4155-a952-f5602a1a8f35.png)
 
 ## Scanning  :
 - basic scanning 
@@ -27,6 +27,7 @@ PORT   STATE    SERVICE VERSION
 ## Enumeration :
 
 - port 21 : is Filtered trying to access it 
+
 ```bash
 ftp <ip>
 ```
@@ -43,13 +44,16 @@ so it seems we can't access it Publicly
 
 - we have some images located at ``/static/images`` , knowing that from page source code . so probably image we upload won't be rendered on this page 
 
+
 ![Pasted image 20220117160811](https://user-images.githubusercontent.com/67979878/150385391-f7a63d57-abaa-4341-8501-89e0584faa57.png)
 
 - and we have upload an image Function with 2 options either from your machine or form url 
 
+
 ![Pasted image 20220117160925](https://user-images.githubusercontent.com/67979878/150385418-b64d5f29-c892-4a42-8a0d-34e864bcefa7.png)
 
 - testing from my machine to upload a .png file and see 
+
 
 ![Pasted image 20220117161037](https://user-images.githubusercontent.com/67979878/150385435-f0d0d4a9-3f71-4dbd-a600-763df2ce9eb0.png)
 
