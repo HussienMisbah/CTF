@@ -42,12 +42,7 @@ so it seems we can't access it Publicly
 
 ![Pasted image 20220117160658](https://user-images.githubusercontent.com/67979878/150385379-a3673dd6-6afc-4c36-a656-005fb6b8c753.png)
 
-- we have some images located at ``/static/images`` , knowing that from page source code . so probably image we upload won't be rendered on this page 
-
-
-![Pasted image 20220117160811](https://user-images.githubusercontent.com/67979878/150385391-f7a63d57-abaa-4341-8501-89e0584faa57.png)
-
-- and we have upload an image Function with 2 options either from your machine or form url 
+- we have upload an image Function with 2 options either from your machine or form url 
 
 
 ![Pasted image 20220117160925](https://user-images.githubusercontent.com/67979878/150385418-b64d5f29-c892-4a42-8a0d-34e864bcefa7.png)
@@ -61,14 +56,7 @@ so it seems we can't access it Publicly
 
 - testing from url : 
 
-firing up a **python http server** at my local machine then watch the request made we can see parameters sent are :
-
-
-```bash
-url=http%3A%2F%2F<my_ip>%3A8888%2Ftest.png&remote=1
-```
-
-and it made the request successfully :
+firing up a **python http server** at my local machine and it made the request successfully :
 
 ```bash
 10.10.11.111 - - [16/Jan/2022 17:31:20] "GET /test.png HTTP/1.1"
