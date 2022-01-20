@@ -248,19 +248,3 @@ gain root reverse shell :
 ![Pasted image 20220117171117](https://user-images.githubusercontent.com/67979878/150385665-5343506f-4531-41bd-a128-73906184c020.png)
 
 # Pwned 
-
-### investigation :
-
-we have at ``/var/www``  the following :
-```
-html forge admin
-```
-
-in the source code we can see :
-
-```python
-blacklist = ["forge.htb", "127.0.0.1", "10.10.10.10", "::1", "localhost",
-             '0.0.0.0', '[0:0:0:0:0:0:0:0]']
-```
-
-which is not enough Filtering to mitigate SSRF , we have Bypassed that By changing any letter at ``forge.htb`` to Uppercase 
