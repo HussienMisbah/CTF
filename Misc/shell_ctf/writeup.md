@@ -3,6 +3,9 @@
 
 ## world's greatest detective (misc)
 
+![Screenshot_2022-07-31_at_15-41-16_Wakandan_Translator](https://user-images.githubusercontent.com/67979878/184498629-764af130-159c-4012-9b5f-085f2421e6f7.png)
+
+
 -> Wakandan Translator :
 
 ```
