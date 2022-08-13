@@ -191,6 +191,9 @@ the challenge has 2 parts :
 
 - Found ciphered image , pokemon cipher -> https://www.dcode.fr/pokemon-unown-alphabet
 
+![pokemon_ciphered](https://user-images.githubusercontent.com/67979878/184498692-7a1cd578-77dc-4a6f-aa32-c48e3ea44e53.png)
+
+
 - USSERAGENT <= first part of the flag
 
 - cookie => hex(Admin)  => 41646d696e
