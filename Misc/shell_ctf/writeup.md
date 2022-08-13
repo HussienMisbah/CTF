@@ -19,6 +19,12 @@ SHELL{m41b01g3_15_my_n3w_l4ngu4g3}
 
 ## tweeeeeet (crypto)
 
+
+![image](https://user-images.githubusercontent.com/67979878/184498534-72be9658-c726-4216-ae84-4c74d97738ea.jpeg)
+
+![tweet_cipher](https://user-images.githubusercontent.com/67979878/184498536-dedd2c44-ac59-47dd-ad3e-cf2a59196bba.png)
+
+
 birds cipher : `SHELL{WELOVESINGING}`
 
 ## Feel ME (crypto)
