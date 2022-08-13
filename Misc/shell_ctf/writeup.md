@@ -65,6 +65,10 @@ from description : `"shell is the key if you did'nt get it xorry"`
 
 XOR File with `shell` key , render image and get the flag 
 
+![secret_document_solution](https://user-images.githubusercontent.com/67979878/184498574-9a33faa4-7ca7-4c15-a48e-c6851a6dd0b4.png)
+
+
+
 ```
 shell{y0u_c4n_s33_th3_h1dd3n}
 ```
@@ -85,6 +89,9 @@ SHELL{y0u_w3r3_7h1nk1ng_R3ally_D33p}
 
 
 stegsolve > analysis > data-extract -> check all 7s because `I was in the seventh heaven painted red green and blue`
+
+
+![heaven_solution](https://user-images.githubusercontent.com/67979878/184498614-7623ace1-6f7a-4a1b-b8bc-1d9b125c529c.png)
 
 
 ```
