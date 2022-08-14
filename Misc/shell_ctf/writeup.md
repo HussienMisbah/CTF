@@ -1,4 +1,4 @@
-# shell ctf , 12/8/2022 , 0xcha0s 
+# shell ctf , 12/8/2022 
 
 ![image](https://user-images.githubusercontent.com/67979878/184507063-87199851-adb1-4f92-8016-66f02855611c.png)
 
