@@ -305,13 +305,6 @@ Upgrade-Insecure-Requests: 1
 
 => Right-to-Left Override Attack 
 
-```
-Hint 1: Think from right to left
-Hint 2: Everything is just related to name and extension of file not content in file ...
-Hint 3: Give me file with name while when seen from eyes look like abc.pdf but its not actually pdf
-Hint 4: Make file name "abc.fdp" look "abc.pdf"
-```
-
 filename = a.fdp. => reveal the flag 
 
 
